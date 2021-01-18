@@ -37,7 +37,10 @@ from pymediainfo import MediaInfo
 from telethon.tl.types import MessageMediaPhoto
 
 BASE_URL = "https://isubtitles.org"
-from fridaybot.Configs import Config
+from fridaybot.Configs import Config, LANG
+import yaml
+import os
+from string import Formatter
 import zipfile
 import os
 
@@ -463,3 +466,22 @@ async def _ytdl(url, is_it, event, tgbot):
             text=f"{ytdl_data['title']} \n**Uploaded Using @FRidayOt**"
         )
         os.remove(f"{ytdl_data['id']}.mp4")
+
+# Thanks To Voice CHat Pyro :/
+class String:
+    def __init__(self):
+        self.languages = {}
+        self.reload_strings()
+    def get_string(self, string):
+        try:
+            return "{}{}".format(PREFIX, self.languages[LANG][string])
+        except KeyError:
+            return self.languages["en"][string]
+    def reload_strings(self):
+        for filename in os.listdir(r"./languages_yml"):
+            if filename.endswith(".yml"):
+                language_name = filename[:-4]
+                self.languages[language_name] = yaml.safe_load(
+                    open(r"./languages_yml/" + filename, encoding="utf8"))
+
+strings = String()
