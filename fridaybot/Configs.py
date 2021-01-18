@@ -1,7 +1,7 @@
 import os
 
 from telethon.tl.types import ChatBannedRights
-
+LANG = os.environ.get("LANG", "en")
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
     import os
@@ -13,7 +13,6 @@ if ENV:
         ALIVE_TEXT = os.environ.get("ALIVE_TEXT", None)
         OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
         VIRUSTOTAL_API_KEY = os.environ.get("VIRUSTOTAL_API_KEY", None)
-        LANG = os.environ.get("LANG", "en")
         GPLINKS_API_KEY = os.environ.get("GPLINKS_API_KEY", None)
         SUPERHERO_API_KEY = os.environ.get("SUPERHERO_API_KEY", None)
         FOOTBALL_API_KEY = os.environ.get("FOOTBALL_API_KEY", None)
