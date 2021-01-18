@@ -19,7 +19,7 @@ nope_failed_pic_change: (
     "या पर्याप्त अधिकार नहीं है।"
 )
 invalid_ext: "अमान्य एक्सटेंशन"
-admin_process_success = "ईमानदारी से, {} [{}](tg://user?id={}) in {}"
+admin_process_success: "ईमानदारी से, {} [{}](tg://user?id={}) in {}"
 no_dlt_rights: "मेरे पास न्‍युकिंग राइटिंग संदेश नहीं है! लेकिन फिर भी वह {} था!"
 reply_an_pin: "यूजर मैसेज टू पिन इट का जवाब दें"
 pin_done: "मैंने इस संदेश को पिन किया है [Message](http://t.me/c/{}/{})"
