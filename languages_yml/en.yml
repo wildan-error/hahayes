@@ -13,11 +13,7 @@ me_not_admin: "I am not an admin nub nibba!"
 no_perm: "I don't have sufficient permissions! This is so sed. Alexa play Tera Baap Aaya"
 no_sql: "Running on Non-SQL mode!"
 chat_pic_sucess: "Chat Picture Changed"
-nope_failed_pic_change: (
-    "Some issue with updating the pic,"
-    "maybe coz I'm not an admin,"
-    "or don't have enough rights."
-)
+nope_failed_pic_change: "Some issue with updating the pic maybe coz I'm not an admin or don't have enough rights."
 invalid_ext: "Invalid Extension"
 admin_process_success: "Sucessfully, {} [{}](tg://user?id={}) in {}"
 no_dlt_rights: "I dont have message nuking rights! But still he was {}!"
