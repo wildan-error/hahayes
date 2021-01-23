@@ -49,10 +49,10 @@ async def _(event):
         if reason:
             await borg.send_message(
                 event.chat_id,
-                f"**My Master Seems To Be Too Busy 👀.** \n__He Going Afk Because Of__ `{reason}`",
+                f"**ke alam barzah!⚰️.** \n__my master ded because__ `{reason}`",
             )
         else:
-            await borg.send_message(event.chat_id, f"**I Am Busy And I Am Going Afk**.")
+            await borg.send_message(event.chat_id, f"**I Am dying And I Am Going to ded**.")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -79,14 +79,14 @@ async def set_not_afk(event):
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
         shite = await borg.send_message(
             event.chat_id,
-            "__Pro is Back Alive__\n**No Longer afk.**\n `I Was afk for:``"
+            "__back from graveyard!__\n**No Longer ded.**\n `I Was ded for:``"
             + total_afk_time
             + "`",
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_ID,  # pylint:disable=E0602
-                "#AfkLogger User is Back Alive ! No Longer Afk ",
+                "#AfkLogger master is Back Alive ! No Longer ded ",
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
